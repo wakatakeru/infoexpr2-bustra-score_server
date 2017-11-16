@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root to: 'scores#index'
+
   get  'scores/index'
   post 'scores/create'
 
