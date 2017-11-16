@@ -1,2 +1,26 @@
-<h1>Scores#index</h1>
-<p>Find me in app/views/scores/index.html.erb</p>
+<div class="container-fruid">
+  <div align="center">
+    <h1>Bustra Score Ranking</h1>
+    <h3>Join <%= @users.size %> Members!!</h3>
+    <hr>
+  </div>
+</div>  
+<div class="container">
+  <div class="col-xs-0 col-md-2"></div>
+  <div class="col-xs-12 col-md-8">
+    <table class="table">
+      <tr>
+        <th>Rank</th>
+        <th>Name</th>
+        <th>Point</th>
+      </tr>
+      <% @scores.each_with_index do |score, num| %>
+      <tr>
+        <td><%= num + 1 %></td>
+        <td><%= score.username %></td>
+        <td><%= score.point %></td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
