@@ -12,3 +12,10 @@ bustraゲームクライアントから送信されたスコア情報をソー�
 3. `$ bundle exec rails db:create`
 4. `$ bundle exec rails db:migrate`
 5. `$ bundle exec rails s`
+
+## POST
+
+POSTメソッドを用いて、`/scores/create`を参照する
+
+- username="ユーザの名前"
+- point=得点(整数)
