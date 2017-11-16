@@ -3,6 +3,7 @@ class ScoresController < ApplicationController
 
   def index
     @scores = Score.order('point DESC').limit(10)
+    @users = Score.select(:username).uniq
   end
 
   def create
